@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" >
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My First Webpage</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+
+    <style>
+
+        @media only screen and (max-width: 1200px) {
+        
+        p{display:none;}
+        
+
+        img.scottishHouse{
+            display:none;
+        }
+
+    }
+
+
+
+
+
+        body{
+        background-color: sienna;
+        }
+
+        h1{
+            text-align: center;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color:coral;
+               }
+
+        p{
+            padding-top: 1cm;
+            color: coral;
+        }
+
+       
+        .motorCycle{
+            border-radius: 8px;
+            height: 500px;      
+            border: 5px solid coral;  
+        
+        }
+
+        .scottishHouse{
+            border-radius: 8px;
+            height: 320px;      
+            border: 5px solid coral;  
+        }
+
+        .links{
+                position: absolute;
+                top:1%;
+                right: 5%;
+                z-index: 1;
+        }
+
+       a{color: coral;}
+
+        button{
+            color: sienna;
+            background-color: coral;
+            border-color: sienna;
+        }
+
+        
+
+
+    </style>
+</head>
+
+<!-- Safe Zone
+;
+
+
+        position: fixed;
+<h6 class="leftCollumnHeading">About me:</h6>
+-->
+
+
+
+ 
+<body id="bodyID">
+
+<header>
+    <button type = "button" id="buttonID" onclick="backgroundChange()">Try</button>
+    <h1>Welcome to my webpage</h1>
+    <p class="links">
+        Helpful Link:<br>
+        <i class="fas fa-scroll"></i>
+        <a href="Resume-CS-Specific0.pdf">Resume</a>
+        
+    </p>
+</header>
+
+
+    <div class="container">
+
+        
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                    <img  class="motorCycle" id="mci" src="motorcycleImage.jpg"><br>
+                    <button type = "button" onclick="imageChange()">Click Me</button>
+                
+            </div>
+
+            <div class="col-lg-6" id="pDIV">
+                <p>Hello,<br>
+                    I am a sophmore Computer Science major. When I finish school I want to 
+                    move to Scottland . I hope that I can get a programming job, work from home, 
+                    live somewhere in the Scottish highlands and raise kids with Scottish 
+                    accents. Maybe a house like this below.
+                </p>
+
+                <img class="scottishHouse" src="betterhouse.jpg">
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    
+
+    
+        
+
+        
+
+    <script>
+
+        function imageChange(){
+            var x = document.getElementById("mci");
+
+            if(x.src.match("motorcycleImage")){x.src="secondMCpic.JPG";}
+            else{x.src="motorcycleImage.jpg";}
+        }
+
+
+        function backgroundChange(){
+    
+      
+            document.body.style.background="url('stars.jpeg')";
+            
+            var y = document.getElementById("pDIV");
+            y.style.color = "coral";
+        
+            var z = document.getElementById("buttonID");
+            z.style.display = "none";
+         
+        }
+
+    </script>
+
+   
+      
+   
+
+</body>
+
+
+</html>
